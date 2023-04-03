@@ -1,4 +1,9 @@
 import sys
+import os
+
+
+def tree_directory(path):
+    print(os.listdir(path))
 
 
 def get_path():
@@ -12,3 +17,4 @@ def get_path():
 
 if __name__ == '__main__':
     PATH = get_path()
+    tree_directory(PATH)
