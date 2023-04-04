@@ -17,10 +17,6 @@ TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "j", "z", "i", "j", "k", "l", 
                "f", "h", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "ya", "je", "i", "ji", "g")
 
 DICTIONARY_FOR_TRANSLITERATION = {}
-if __name__ == '__main__':
-    for cyr, tran in zip(CYRILLIC_SYMBOLS, TRANSLATION):
-        DICTIONARY_FOR_TRANSLITERATION[ord(cyr)] = tran
-        DICTIONARY_FOR_TRANSLITERATION[ord(cyr.upper())] = tran.upper()
 
 
 def normalize(name):
@@ -104,6 +100,10 @@ def get_path():
 
 
 if __name__ == '__main__':
+    for cyr, tran in zip(CYRILLIC_SYMBOLS, TRANSLATION):
+        DICTIONARY_FOR_TRANSLITERATION[ord(cyr)] = tran
+        DICTIONARY_FOR_TRANSLITERATION[ord(cyr.upper())] = tran.upper()
+
     sorted_files = {'images': [],
                     'files': [],
                     'documents': [],
