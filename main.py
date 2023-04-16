@@ -80,7 +80,6 @@ def remove_empty_directory(path):
 
 
 def tree_directory(path):
-    sys.setrecursionlimit(100)
     for file in os.scandir(path):
         if file.is_dir() and file.name not in sorted_files.keys():
             tree_directory(file.path)
